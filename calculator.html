@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            flex-direction: column;
+            color: azure;
+        }
+        table{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0cm;
+
+        }
+        #abc{
+            height: 40px;
+            width: 50px;
+            font-size:large;
+            background-color: azure;
+            border: none;
+        }
+        #abcd{
+            height: 85px;
+            width: 50px;
+            font-size:larger;
+            background-color: azure;
+        }
+        .sumanth{
+            height: 40px;
+            width: 210px;
+            text-align: right;
+            font-size:x-large;
+        }
+        .sai{
+            height: 350px;
+            border: 0cm;
+        }
+    </style>
+</head>
+<body>
+    <div class="sai">
+        <center><h2>CALCULATOR</h2></center>
+        <table border="1">
+            <tr>
+                <td colspan="4"><input type="text" class="sumanth"></td>
+            </tr>
+            <tr>
+                <td><button id="abc" onclick="demo('+')">+</button></td>
+                <td><button id="abc" onclick="demo('-')">-</button></td>
+                <td><button id="abc" onclick="demo('/')">/</button></td>
+                <td><button id="abc" onclick="demo('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button id="abc" onclick="demo('7')">7</button></td>
+                <td><button id="abc" onclick="demo('8')">8</button></td>
+                <td><button id="abc" onclick="demo('9')">9</button></td>
+                <td><button id="abc" onclick="demo('%')">%</button></td>
+            </tr>
+            <tr>
+                <td><button id="abc" onclick="demo('6')">6</button></td>
+                <td><button id="abc" onclick="demo('5')">5</button></td>
+                <td><button id="abc" onclick="demo('4')">4</button></td>
+                <td rowspan="2"><button id="abcd" onclick="calci()">=</button></td>
+            </tr>
+            <tr>
+                <td><button id="abc" onclick="demo('3')">3</button></td>
+                <td><button id="abc" onclick="demo('2')">2</button></td>
+                <td><button id="abc" onclick="demo('1')">1</button></td>
+            </tr>
+            <tr>
+                <td><button id="abc" onclick="demo('0')">0</button></td>
+                <td><button id="abc" onclick="demo('.')">.</button></td>
+                <td><button id="abc" onclick="del()">DEL</button></td>
+                <td><button id="abc" onclick="remo()">CE</button></td>
+            </tr>
+        </table>
+
+        <script>
+            function demo(num){
+                let a=document.querySelector(".sumanth").value+=num;
+                console.log(a);
+            }
+
+            function calci(){
+                let b=eval(document.querySelector(".sumanth").value)
+                let c=document.querySelector(".sumanth").value=b;
+                console.log(c);
+            }
+            
+            function remo(){
+                let d=document.querySelector(".sumanth").value="";
+                console.log(d);
+            }
+
+            function del(){
+                let e=document.querySelector(".sumanth").value
+                let f=document.querySelector(".sumanth").value=e.slice(0,-1);
+                console.log(f)
+            }
+        </script>
+    </div>
+</body>
+</html>
